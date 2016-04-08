@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:padding="5dp" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay" >
+
+        <ImageView
+            android:id="@+id/widget_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/widget_image"
+            android:scaleType="fitXY" />
+        
+         <TextView
+            android:id="@+id/widget_text_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:textColor="@color/primary_color"
+			android:textStyle="bold"
+            android:text="@string/widget_error"
+            android:gravity="center"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/likes_background" >
+
+            <TextView
+                android:id="@+id/widget_likesBar"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/likes"
+                android:drawablePadding="10dip"
+                android:drawableStart="@drawable/likes"
+                android:gravity="center"
+                android:indeterminate="false"
+                android:max="100"
+                android:textColor="@color/likes_text" />
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

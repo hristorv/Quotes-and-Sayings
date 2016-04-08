@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_action_good_disabled" android:state_enabled="false"/>
+    <item android:drawable="@drawable/ic_action_good_white"/>
+
+</selector><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/drawable/like_selector.xml -->

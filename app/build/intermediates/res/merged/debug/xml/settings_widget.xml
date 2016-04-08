@@ -1,0 +1,20 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <com.afollestad.materialdialogs.prefs.MaterialListPreference
+        android:defaultValue="@string/pref_interval_default"
+        android:dialogTitle="@string/pref_interval"
+        android:entries="@array/pref_interval_entry"
+        android:entryValues="@array/pref_interval_value"
+        android:key="pref_widget_interval"
+        android:title="@string/pref_interval" />
+
+    <com.afollestad.materialdialogs.prefs.MaterialMultiSelectListPreference
+        android:defaultValue="@array/pref_default_array"
+        android:dialogTitle="@string/pref_filter"
+        android:key="pref_widget_filter"
+        android:title="@string/pref_filter" />
+
+  
+
+</PreferenceScreen><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/xml/settings_widget.xml -->

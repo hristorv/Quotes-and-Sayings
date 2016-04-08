@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="pref_wallpaper_active"
+        android:title="@string/pref_activate" />
+
+    <com.afollestad.materialdialogs.prefs.MaterialListPreference
+        android:defaultValue="@string/pref_interval_default"
+        android:dialogTitle="@string/pref_interval"
+        android:entries="@array/pref_interval_entry"
+        android:entryValues="@array/pref_interval_value"
+        android:key="pref_wallapper_interval"
+        android:title="@string/pref_interval" />
+
+    <com.afollestad.materialdialogs.prefs.MaterialMultiSelectListPreference
+        android:defaultValue="@array/pref_default_array"
+        android:dialogTitle="@string/pref_filter"
+        android:key="pref_wallapper_filter"
+        android:title="@string/pref_filter" />
+    
+    <com.afollestad.materialdialogs.prefs.MaterialListPreference
+        android:defaultValue="@string/pref_wallpaper_scaling_default"
+        android:dialogTitle="@string/wallpaper_dialog_title"
+        android:entries="@array/wallpaper_dialog_items"
+        android:entryValues="@array/wallpaper_dialog_items"
+        android:key="pref_wallpaper_scaling"
+        android:title="@string/wallpaper_scaling" />
+
+</PreferenceScreen>

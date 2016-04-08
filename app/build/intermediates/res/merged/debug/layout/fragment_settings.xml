@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk.example.quotesandsayings.view.SlideFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:id="@android:id/list">
+    </ListView>
+
+</tk.example.quotesandsayings.view.SlideFrameLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/layout/fragment_settings.xml -->

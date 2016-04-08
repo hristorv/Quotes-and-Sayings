@@ -1,0 +1,55 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_home"
+            android:checked="true"
+            android:icon="@drawable/drawer_home"
+            android:title="@string/drawer_home"/>
+        <group
+            android:id="@+id/grp_groups"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/drawer_pictures"
+                android:icon="@drawable/drawer_pictures"
+                android:title="@string/drawer_pictures"/>
+            <item
+                android:id="@+id/drawer_albums"
+                android:icon="@drawable/drawer_albums"
+                android:title="@string/drawer_albums"/>
+            <item
+                android:id="@+id/drawer_artists"
+                android:icon="@drawable/drawer_artists"
+                android:title="@string/drawer_artists"/>
+        </group>
+        <group
+            android:id="@+id/grp_utilities"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/drawer_create"
+                android:icon="@drawable/drawer_create"
+                android:title="@string/drawer_create"/>
+            <item
+                android:id="@+id/drawer_schedulers"
+                android:icon="@drawable/drawer_schedulers"
+                android:title="@string/drawer_schedulers"/>
+            <item
+                android:id="@+id/drawer_account"
+                android:icon="@drawable/drawer_account"
+                android:title="@string/drawer_account"/>
+        </group>
+    </group>
+    <group
+        android:id="@+id/grp_about"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/drawer_feedback"
+            android:icon="@drawable/drawer_feedback"
+            android:title="@string/drawer_feedback"/>
+        <item
+            android:id="@+id/drawer_logout"
+            android:icon="@drawable/drawer_logout"
+            android:title="@string/drawer_logout"/>
+    </group>
+
+</menu><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/menu/drawer_view.xml -->

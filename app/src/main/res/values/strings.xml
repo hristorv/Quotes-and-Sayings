@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name" tools:ignore="MissingTranslation">Quotes and Sayings</string>
+    <string name="app_icon_name" tools:ignore="MissingTranslation">Quotes</string>
+
+    <!-- Content Description -->
+    <string name="pref_interval">Refresh interval</string>
+    <string name="pref_filter">Filter categories</string>
+    <string name="pref_activate">Activate </string>
+    <string name="pref_interval_default">1</string>
+    <string-array name="pref_default_array">
+        <item></item>
+    </string-array>
+    <string-array name="pref_interval_entry">
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+        <item>48 hours</item>
+    </string-array>
+    <string-array name="pref_interval_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+        <item>12</item>
+        <item>24</item>
+        <item>48</item>
+    </string-array>
+
+    <string name="descr_image">Image</string>
+    <string name="splash">Splash screen</string>
+    <string name="image_hq">High quality image</string>
+    <string name="gallery_activity">Gallery</string>
+    <string name="get_category_url">http://www.quotesandsayings.tk/scgi-bin/get_categories.py</string>
+    <string name="get_single_category_url">http://www.quotesandsayings.tk/scgi-bin/get_single_category.py</string>
+    <string name="likes_url">http://www.quotesandsayings.tk/scgi-bin/like.py</string>
+    <string name="widget_image">Widget image</string>
+    <string name="title_activity_widget_config">Widget Settings</string>
+    <string name="action_set_wallpaper">Set as wallpaper</string>
+    <string name="action_download">Download</string>
+    <string name="action_like">Like</string>
+    <string name="action_share">Share</string>
+    <string name="notification_text">Your new quote!</string>
+    <string name="notification_ticker">Your new quote!</string>
+    <string name="notification_sub_text">Tap to open in fullscreen.</string>
+    <string name="cancel">Cancel</string>
+    <string name="about_title">About</string>
+    <string name="action_ok">OK</string>
+    <string name="about_support_email_link">support@quotesandsayings.tk</string>
+    <string name="about_dev_email_link">dev@quotesandsayings.tk</string>
+    <string name="about_support_email_desc">For bug reports and suggestions,contact support at:</string>
+    <string name="about_dev_email_desc">Contact developer at:</string>
+    <string name="about_version">Version</string>
+    <string name="likes">Likes</string>
+    <string name="search_hint">Hint</string>
+    <string name="action_add_album">Add to album</string>
+    <string name="create_album">Create new album</string>
+    <string name="enter_album_name">Enter album name:</string>
+    <string name="album_name_default"></string>
+    <string name="image_is_in_album">Image is already in that album!</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_delete_image">Delete image from album?</string>
+    <string name="exit_confirm">Exit application?</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_delete_album">Delete album?</string>
+    <string name="nav_categories">Categories</string>
+    <string name="nav_albums">Albums</string>
+    <string name="nav_wallpaper">Wallpaper</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_widget">Widget</string>
+    <string name="drawer_about">About</string>
+    <string name="nav_help">Help</string>
+    <string name="nav_settings">Settings</string>
+    <string name="album_warning_input_min_length">The name must be atleast 3 characters long.</string>
+    <string name="album_warning_input_name_taken">That name is already taken.</string>
+    <string name="warning_renamed">Renamed</string>
+    <string name="snackbar_action_undo">UNDO</string>
+    <string name="snackbar_action_retry">RETRY</string>
+    <string name="warning_deleted">Deleted</string>
+    <string name="album_warning_input_max_length">The name must not be more than 10 characters</string>
+    <string name="indicator_descr">Indicator</string>
+    <string name="image_added">Added</string>
+    <string name="image_saved">Image saved in Download.</string>
+    <string name="wallpaper_changed">Wallpaper changed.</string>
+    <string name="liked">Liked</string>
+    <string name="url_top">http://www.quotesandsayings.tk/scgi-bin/get_top.py</string>
+    <string name="wallpaper_dialog_title">Choose scaling:</string>
+
+    <string-array name="wallpaper_dialog_items">
+        <item>Default (Recommended)</item>
+        <item>Stretch</item>
+        <item>Fit</item>
+        <item>Center</item>
+    </string-array>
+    <string name="wallpaper_scaling">Scaling</string>
+    <string name="pref_wallpaper_scaling_default">Default (Recommended)</string>
+    <string name="choose_app">Choose application:</string>
+    <string name="please_wait">Please wait &#8230;</string>
+    <string name="got_it">Got it</string>
+    <string name="connection_error">No Internet Connection</string>
+    <string name="no_connection_dialog_content">You are not connected to the internet. You can start in offline mode, but you will be unable to browse any images.</string>
+    <string name="no_connection_dialog_title">No Internet Connection</string>
+    <string name="action_go_offline">Go Offline</string>
+    <string name="action_retry">Retry</string>
+    <string name="offline_alert">You are offline</string>
+    <string name="snackbar_action_reconnect">Reconnect</string>
+    <string name="reconnect_content">Internet connection is available. Do you want to reconnect?</string>
+    <string name="reconnect_title">Connection available</string>
+    <string name="action_reconnect">Reconnect</string>
+    <string name="notification_conn_error_title">Failed downloading quote</string>
+    <string name="notification_conn_error_subtitle">Check your internet connection and tap to retry.</string>
+    <string name="widget_error">No internet connection. Tap to retry.</string>
+    <string name="top">Top 50</string>
+    <string name="favorites">Favorites</string>
+
+    <string name="drawer_home">Home</string>
+    <string name="drawer_pictures">Pictures</string>
+    <string name="drawer_albums">Albums</string>
+    <string name="drawer_artists">Artists</string>
+    <string name="drawer_create">Create</string>
+    <string name="drawer_schedulers">Schedulers</string>
+    <string name="drawer_account">Account</string>
+    <string name="drawer_feedback">Feedback</string>
+    <string name="drawer_logout">Log out</string>
+
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_primary_color"
+    android:paddingBottom="20dp" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/help_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/help_button" >
+    </android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:id="@+id/icnSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/indicator_descr"
+        android:src="@drawable/ic_radio_button_off_white_18dp" />
+
+    <ImageView
+        android:id="@+id/icnThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/icnSecond"
+        android:layout_toRightOf="@+id/icnSecond"
+        android:contentDescription="@string/indicator_descr"
+        android:src="@drawable/ic_radio_button_off_white_18dp" />
+
+    <ImageView
+        android:id="@+id/icnFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/icnSecond"
+        android:layout_toStartOf="@+id/icnSecond"
+        android:contentDescription="@string/indicator_descr"
+        android:src="@drawable/ic_radio_button_on_white_18dp" />
+
+    <Button
+        android:id="@+id/help_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/icnSecond"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:text="@string/got_it"
+        android:textColor="@color/white_overlay"
+        android:textSize="22sp" />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/set_wallpaper"
+        android:icon="@drawable/ic_action_picture"
+        android:orderInCategory="7"
+        app:showAsAction="never"
+        android:title="@string/action_set_wallpaper">
+    </item>
+    <item
+        android:id="@+id/download"
+        android:icon="@drawable/ic_action_download"
+        android:orderInCategory="8"
+        app:showAsAction="never"
+        android:title="@string/action_download">
+    </item>
+    <item
+        android:id="@+id/like"
+        android:icon="@drawable/like_selector"
+        android:orderInCategory="4"
+        app:showAsAction="always"
+        android:title="@string/action_like">
+    </item>
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_action_share_white"
+        android:orderInCategory="6"
+        app:showAsAction="always"
+        android:title="@string/action_share">
+    </item>
+    <item
+        android:id="@+id/add_album"
+        android:icon="@drawable/ic_add_album"
+        android:orderInCategory="5"
+        app:showAsAction="always"
+        android:title="@string/action_add_album">
+    </item>
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_delete"
+        android:orderInCategory="3"
+        app:showAsAction="always"
+        android:title="@string/action_delete"
+        android:visible="false">
+    </item>
+
+</menu>
