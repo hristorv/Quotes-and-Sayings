@@ -29,4 +29,4 @@
         tools:ignore="NewApi,RtlSymmetry,UnusedAttribute"
         tools:text="Message" />
 
-</LinearLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/core/src/main/res/layout/md_stub_progress_indeterminate.xml -->
+</LinearLayout>

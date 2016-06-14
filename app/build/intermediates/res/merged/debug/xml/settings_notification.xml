@@ -19,4 +19,4 @@
                 android:key="pref_notification_filter"
                 android:title="@string/pref_filter" />
 
-</PreferenceScreen><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/xml/settings_notification.xml -->
+</PreferenceScreen>

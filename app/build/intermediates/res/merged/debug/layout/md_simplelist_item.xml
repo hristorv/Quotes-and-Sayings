@@ -31,4 +31,4 @@
         android:textSize="@dimen/md_simplelist_textsize"
         tools:text="Title" />
 
-</LinearLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/commons/src/main/res/layout/md_simplelist_item.xml --><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/build/intermediates/exploded-aar/com.afollestad/commons/unspecified/res/layout/md_simplelist_item.xml -->
+</LinearLayout>

@@ -2,4 +2,3 @@
 <searchable xmlns:android="http://schemas.android.com/apk/res/android"
     android:hint="@string/search_hint"
     android:label="@string/app_name" />
-<!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/xml/searchable.xml -->

@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public abstract class ShaderImageView extends ImageView {
+public abstract class ShaderImageView extends RoundedImageView {
 
     private final static boolean DEBUG = false;
     private ShaderHelper pathHelper;

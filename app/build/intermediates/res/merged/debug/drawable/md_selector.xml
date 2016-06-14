@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/md_item_selected" android:state_pressed="true" />
     <item android:drawable="@drawable/md_transparent" />
 
-</selector><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/core/src/main/res/drawable/md_selector.xml --><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/build/intermediates/exploded-aar/com.afollestad/core/unspecified/res/drawable/md_selector.xml -->
+</selector>

@@ -72,16 +72,16 @@ public class InitializationActivity extends Activity {
                 .resetViewBeforeLoading(true)
                 .build();
         for (int i = 0; i < ImageData.getInstance().getCategories().length; i++) {
-            ImageLoader.getInstance().loadImage(ImageData.getInstance().getCategories()[i].getBackgroundUrl(),new ImageSize(100,100), options, new SimpleImageLoadingListener());
+            ImageLoader.getInstance().loadImage(ImageData.getInstance().getCategories()[i].getBackgroundUrl(), new ImageSize(100, 100), options, new SimpleImageLoadingListener());
         }
     }
 
     private void downloadCategories() {
-       // if (ConnectionManager.isConnected(this)) {
-            new GetJson().execute();
-      //  } else {
-      //      showOfflineDialog();
-       // }
+        // if (ConnectionManager.isConnected(this)) {
+        new GetJson().execute();
+        //  } else {
+        //      showOfflineDialog();
+        // }
     }
 
     private void showOfflineDialog() {
@@ -208,27 +208,47 @@ public class InitializationActivity extends Activity {
 
         @Override
         protected Void doInBackground(Void... params) {
-            try {
+          //  try {
+
                 //getCategories();
                 Category[] categories = new Category[10];
-                categories[0] = new Category("Favorites",new Image[0],"drawable://" + R.drawable.cat_favourites);
-                categories[1] = new Category("Top",new Image[0],"drawable://" + R.drawable.cat_top);
-                categories[2] = new Category("Funny",new Image[0],"drawable://" + R.drawable.cat_funny);
-                categories[3] = new Category("Happiness",new Image[0],"drawable://" + R.drawable.cat_happiness);
-                categories[4] = new Category("Inspirational",new Image[0],"drawable://" + R.drawable.cat_inspirational);
-                categories[5] = new Category("Life",new Image[0],"drawable://" + R.drawable.cat_life);
-                categories[6] = new Category("Love",new Image[0],"drawable://" + R.drawable.cat_love);
-                categories[7] = new Category("Success",new Image[0],"drawable://" + R.drawable.cat_success);
-                categories[8] = new Category("Travel",new Image[0],"drawable://" + R.drawable.cat_travel);
-                categories[9] = new Category("Wisdom",new Image[0],"drawable://" + R.drawable.cat_wisdom);
+                categories[0] = new Category("Favorites", new Image[0], "drawable://" + R.drawable.cat_favourites);
+                categories[1] = new Category("Top", new Image[0], "drawable://" + R.drawable.cat_top);
+                categories[2] = new Category("Funny", new Image[0], "drawable://" + R.drawable.cat_funny);
+                categories[3] = new Category("Happiness", new Image[0], "drawable://" + R.drawable.cat_happiness);
+                categories[4] = new Category("Inspirational", new Image[0], "drawable://" + R.drawable.cat_inspirational);
+                categories[5] = new Category("Life", new Image[0], "drawable://" + R.drawable.cat_life);
+                categories[6] = new Category("Love", new Image[0], "drawable://" + R.drawable.cat_love);
+                categories[7] = new Category("Success", new Image[0], "drawable://" + R.drawable.cat_success);
+                categories[8] = new Category("Travel", new Image[0], "drawable://" + R.drawable.cat_travel);
+                categories[9] = new Category("Wisdom", new Image[0], "drawable://" + R.drawable.cat_wisdom);
 
 
+                Image[] imagesTest = new Image[10];
+                for (int i = 0; i < imagesTest.length; i++) {
+                    Image image = new Image();
+                    image.setCategory(categories[i].getName());
+                    image.setLikes(String.valueOf(i));
+                    image.setUrl(categories[i].getBackgroundUrl());
+                    imagesTest[i] = image;
+                }
+                Image[] images = new Image[50];
+                for (int i = 0; i < images.length; i++) {
+                    int num;
+                    if (i < 10) {
+                        num = i;
+                    } else {
+                        num = i / 10;
+                    }
+                    images[i] = imagesTest[num];
+                }
+                categories[2].setImages(images);
 
                 ImageData.getInstance().setCategories(categories);
 
-            } catch (Exception e) {
-                showOfflineDialogOnMainThread();
-            }
+        //    } catch (Exception e) {
+       //         showOfflineDialogOnMainThread();
+       //     }
             ImageData.getInstance().initImagesFavorites(
                     InitializationActivity.this);
             for (Category category : ImageData.getInstance().getCategories()) {
@@ -262,7 +282,7 @@ public class InitializationActivity extends Activity {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-           // cacheCategoryImages();
+            // cacheCategoryImages();
             Intent i = new Intent(InitializationActivity.this,
                     MainMenuActivity.class);
             i.putExtra(Constants.Extra.IS_OFFLINE, false);

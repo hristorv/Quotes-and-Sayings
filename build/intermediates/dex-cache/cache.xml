@@ -2,88 +2,116 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.afollestad\core\unspecified\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\percent\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="01f6803ae5dc0b14d24f456f2cbf5a4cbe53bb56">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-7f50e4b8f8b98d8e7b9b5fa4b97af0bdea8bcde8.jar" />
+        sha1="91c2541305eec5a688f3a60529d974e48f77d760">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-percent-23.4.0_c1bf0e9baf5d99b2ef7a95140cccf56986082091.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-769a13791f278d90ad8e78083f2001f19764db20.jar" />
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.4.0_b007819c391dda8d4ed04eb03cca4d17b1241465.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.afollestad\commons\unspecified\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="f786c24d16e7088a18a6a830669f12057e54265f">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-df09dc6ef1880522c1f436b7ca14e355e0ce64b8.jar" />
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_c1a4f3a91e9db6c6539f455ad161dd644fdc682d.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-129990c8bed8c15221972ac74a2bb51b008b5172.jar" />
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_0b2116f152f07c4ac913a25bc3d7d0563a27c7c0.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\gson-2.3.1-219128f34eb22021a857984e6c296659926b8c0f.jar" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_e5d1421ca6a1f95d9240f29d718282e0a5a4d7be.jar" />
     </item>
     <item
-        jar="D:\Programs\Android\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-df9f3da779c0a88715c9373eca899fa8f8d69cc3.jar" />
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_cf4c6153e415dc938f1bd2a0eab836b1343cad5b.jar" />
     </item>
     <item
         jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\me.zhanghai.android.materialprogressbar\library\1.1.4\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="2a24cba08e1d865a79e61335f5a1bd64d520106d">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-c4c55fcb4dd3e5c2388e7550feb21782f3d1e418.jar" />
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\me.zhanghai.android.materialprogressbar-library-1.1.4_c4c55fcb4dd3e5c2388e7550feb21782f3d1e418.jar" />
+    </item>
+    <item
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_5b482eadaddbee910bb7260ee455aa5d38461f68.jar" />
     </item>
     <item
         jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\libs\universal-image-loader-1.9.3.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
         sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-11181195d42396a661a39206114c6bd8ec445e75.jar" />
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3_11181195d42396a661a39206114c6bd8ec445e75.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jar="D:\Programs\Android\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-351d1cf9a55c4aea3df2db621accde671b7ae1a5.jar" />
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_f8f2b2715882b8cb11eef24f3ed1a5f98bb6931e.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-f2061bb4e4b690293d62e3b68d290116aa177b65.jar" />
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.4.0_678519b64214fff5590ecc714fc7e32d110e8c21.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-af755bd7367cba748273d78e975b4c96a5c93cf9.jar" />
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\gson-2.4_4b40ea518f0845cce87540a1dae43ecc109351e7.jar" />
     </item>
     <item
-        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\palette-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\classes-fda63dde0c827ce75d22bba923036a20e0972fe7.jar" />
+        sha1="51518e8e8f97c314a243d9def0ded91d385b6a1e">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\com.android.support-palette-v7-23.4.0_54f516f6d15508068863a2cba47ef9c08885b127.jar" />
+    </item>
+    <item
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="40e1778f2a21b3d17269d6f18cddfd799bc3f037">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_a3f9adc0fe34051f4bb57b7f1ea35e9f3fdcf05b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="bea98ab361189cd42a1c60c255c0739551d25b32">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\instant-run_a1886a389c0625b99bced8ca361aa34d747a2f80.jar" />
+    </item>
+    <item
+        jar="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Hri100\StudioProjects\QuotesAndSayings\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_31e748bea8a3bc9fb078f723422593c82cf9f807.jar" />
     </item>
 
 </items>

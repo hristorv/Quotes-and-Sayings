@@ -62,4 +62,4 @@
         android:gravity="center_vertical"
         android:orientation="vertical" />
 
-</LinearLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/commons/src/main/res/layout/md_preference_custom.xml -->
+</LinearLayout>

@@ -6,24 +6,31 @@ import tk.example.quotesandsayings.controller.PreferencesListener;
 import tk.example.quotesandsayings.model.Constants;
 import tk.example.quotesandsayings.model.Image;
 import tk.example.quotesandsayings.view.adapters.ImageGridRecyclerAdapter;
+import tk.example.quotesandsayings.view.adapters.TabPagerAdapter;
 import tk.example.quotesandsayings.view.fragments.AlbumsFragment;
 import tk.example.quotesandsayings.view.fragments.CategoriesFragment;
 import tk.example.quotesandsayings.view.fragments.HelpFragment;
 import tk.example.quotesandsayings.view.fragments.ImageGridFragment;
 import tk.example.quotesandsayings.view.fragments.SettingsFragment;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -34,6 +41,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
@@ -41,6 +49,8 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.MaterialDialog.Builder;
+
+import java.util.ArrayList;
 
 public class MainMenuActivity extends AppCompatActivity {
 
@@ -57,6 +67,8 @@ public class MainMenuActivity extends AppCompatActivity {
     private NavigationView nvDrawer;
     protected MenuItem mPreviousMenuItem;
     private boolean isOffline;
+    private ViewPager tabViewPager;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +95,10 @@ public class MainMenuActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        // Setup tabs
+        tabViewPager = (ViewPager) findViewById(R.id.tab_viewpager);
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
         // Find our drawer view
         nvDrawer = (NavigationView) findViewById(R.id.nav_view);
@@ -111,7 +127,7 @@ public class MainMenuActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(drawerToggle);
         if (savedInstanceState == null) {
             // on first time display view for first navigation item
-            displayView(getResources().getString(R.string.nav_categories),
+            openDrawerItem(getResources().getString(R.string.nav_categories),
                     R.id.drawer_home);
             // Open help fragment, if the user opens application for the first
             // time.
@@ -149,7 +165,7 @@ public class MainMenuActivity extends AppCompatActivity {
                 .setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        displayView(menuItem.getTitle(), menuItem.getItemId());
+                        openDrawerItem(menuItem.getTitle(), menuItem.getItemId());
                         // Update highlighted item in the navigation menu
                         nvDrawer.setCheckedItem(menuItem.getItemId());
                         return true;
@@ -164,34 +180,196 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
 
-    private void displayView(CharSequence title, int id) {
-        // update the main content by replacing fragments
-        Fragment fragment = null;
-        fragment = initializeFragmentByCategory(id, fragment);
-        String tag;
-        if (title.equals("Albums")) {
-            tag = "AlbumsFragment";
-        } else {
-            tag = "";
-        }
-        if (fragment != null) {
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager
-                    .beginTransaction()
-                    .setCustomAnimations(R.animator.slide_in_left,
-                            R.animator.slide_out_left,
-                            R.animator.slide_in_left, R.animator.slide_out_left)
-                    .replace(R.id.content_frame, fragment, tag).commit();
+//    private void displayView(CharSequence title, int id) {
+//        // update the main content by replacing fragments
+//        Fragment fragment = null;
+//        fragment = initializeFragmentByCategory(id, fragment);
+//        String tag;
+//        if (title.equals("Albums")) {
+//            tag = "AlbumsFragment";
+//        } else {
+//            tag = "";
+//        }
+////        if (fragment != null) {
+////            FragmentManager fragmentManager = getFragmentManager();
+////            fragmentManager
+////                    .beginTransaction()
+////                    .setCustomAnimations(R.animator.slide_in_left,
+////                            R.animator.slide_out_left,
+////                            R.animator.slide_in_left, R.animator.slide_out_left)
+////                    .replace(R.id.tab_viewpager, fragment, tag).commit();
+//            setupTabs(id);
+//            // update the title, then close the drawer
+//            setTitle(title);
+//            drawerLayout.closeDrawers();
+// //       } else {
+//            // If fragment is null,we are opening About or Help which is dialog
+//            // and we need only to close the drawer since the old fragment is
+//            // still active
+//  //          drawerLayout.closeDrawers();
+//  //      }
+//    }
 
-            // update the title, then close the drawer
-            setTitle(title);
-            drawerLayout.closeDrawers();
-        } else {
-            // If fragment is null,we are opening About or Help which is dialog
-            // and we need only to close the drawer since the old fragment is
-            // still active
-            drawerLayout.closeDrawers();
+    private void initTabs(int id) {
+        TabPagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager());
+        ArrayList<Drawable> icons = new ArrayList<Drawable>();
+        switch (id) {
+            case R.id.drawer_home:
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_categories));
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_timeline));
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_search));
+                icons.add(tintDrawable(R.drawable.ic_tab_categories, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_timeline_white_36dp, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_search_white_36dp, R.color.tab_unselected));
+                break;
+            case R.id.drawer_pictures:
+                Bundle bundle = new Bundle();
+                bundle.putInt(Constants.Extra.CATEGORY_INDEX, 2);
+                Fragment fragment = new ImageGridFragment();
+                fragment.setArguments(bundle);
+                Bundle bundle2 = new Bundle();
+                bundle2.putInt(Constants.Extra.CATEGORY_INDEX, 2);
+                Fragment fragment2 = new ImageGridFragment();
+                fragment2.setArguments(bundle2);
+                Bundle bundle3 = new Bundle();
+                bundle3.putInt(Constants.Extra.CATEGORY_INDEX, 2);
+                Fragment fragment3 = new ImageGridFragment();
+                fragment3.setArguments(bundle3);
+                adapter.addFrag(fragment, getResources().getString(R.string.tab_collection));
+                adapter.addFrag(fragment2, getResources().getString(R.string.tab_favorites));
+                adapter.addFrag(fragment3, getResources().getString(R.string.tab_trending));
+                icons.add(tintDrawable(R.drawable.ic_create_white, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_thumb_up_white_36dp, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_trending_up_white_36dp, R.color.tab_unselected));
+                break;
+            case R.id.drawer_albums:
+                Fragment albumsFragment = new AlbumsFragment();
+                adapter.addFrag(albumsFragment, getResources().getString(R.string.tab_browse));
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_collection));
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_favorites));
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_trending));
+                icons.add(tintDrawable(R.drawable.ic_tab_browse, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_create_white, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_thumb_up_white_36dp, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_trending_up_white_36dp, R.color.tab_unselected));
+                break;
+            case R.id.drawer_artists:
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_browse));
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_favorites));
+                adapter.addFrag(new CategoriesFragment(), getResources().getString(R.string.tab_trending));
+                icons.add(tintDrawable(R.drawable.ic_tab_browse, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_thumb_up_white_36dp, R.color.tab_unselected));
+                icons.add(tintDrawable(R.drawable.ic_trending_up_white_36dp, R.color.tab_unselected));
+                break;
         }
+
+        tabViewPager.setAdapter(adapter);
+        // Set the title when changing tabs.
+        tabViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                TabPagerAdapter adapter = (TabPagerAdapter) tabViewPager.getAdapter();
+                setTitle(adapter.getTitle(position));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        tabLayout.setOnTabSelectedListener(null);
+        tabLayout.setupWithViewPager(tabViewPager);
+
+        // Tab listener for changing icons and also fixing clicking on tabs.
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                tab.setIcon(tintDrawable(tab.getIcon(), R.color.white));
+                if (tab.getPosition() != tabViewPager.getCurrentItem()) {
+                    tabViewPager.setCurrentItem(tab.getPosition(), true);
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                tab.setIcon(tintDrawable(tab.getIcon(), R.color.tab_unselected));
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        // Set the icons for each tab.
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            tabLayout.getTabAt(i).setIcon(icons.get(i));
+        }
+        // When starting tab from drawer, set the first item icon and title.
+        TabLayout.Tab tab = tabLayout.getTabAt(0);
+        tab.setIcon(tintDrawable(tab.getIcon(), R.color.white));
+        setTitle(adapter.getTitle(0));
+    }
+
+
+
+    private void openDrawerItem(CharSequence title, int id) {
+
+        switch (id) {
+            case R.id.drawer_home:
+                initTabs(id);
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.drawer_pictures:
+                initTabs(id);
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.drawer_albums:
+                initTabs(id);
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.drawer_artists:
+                initTabs(id);
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.drawer_schedulers:
+                setTitle(title);
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.drawer_account:
+                setTitle(title);
+                drawerLayout.closeDrawers();
+                openAccount();
+                break;
+            case R.id.drawer_feedback:
+                openAbout();
+                drawerLayout.closeDrawers();
+                break;
+            case R.id.drawer_logout:
+                openHelp();
+                drawerLayout.closeDrawers();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private Drawable tintDrawable(Drawable drawableInput, int colorID) {
+        Drawable drawable = DrawableCompat.wrap(drawableInput);
+        ColorStateList colorSelector = getResources().getColorStateList(colorID);
+        DrawableCompat.setTintList(drawable, colorSelector);
+        return drawable;
+    }
+
+    private Drawable tintDrawable(int drawableID, int colorID) {
+        Drawable drawable = DrawableCompat.wrap(getResources().getDrawable(drawableID));
+        ColorStateList colorSelector = getResources().getColorStateList(colorID);
+        DrawableCompat.setTintList(drawable, colorSelector);
+        return drawable;
     }
 
     private void clearBackStackEntries() {
@@ -203,78 +381,20 @@ public class MainMenuActivity extends AppCompatActivity {
                 FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 
-    private Fragment initializeFragmentByCategory(int id, Fragment fragment) {
-        Bundle bundle = new Bundle();
-        switch (id) {
-            case R.id.drawer_home:
-                clearBackStackEntries();
-                fragment = new CategoriesFragment();
-                break;
-            case R.id.drawer_albums:
-                clearBackStackEntries();
-                fragment = new AlbumsFragment();
-                break;
-            case R.id.drawer_schedulers:
-                clearBackStackEntries();
-                bundle.putString(Constants.Settings.SETTINGS,
-                        Constants.Settings.WALLPAPER);
-                fragment = new SettingsFragment();
-                fragment.setArguments(bundle);
-                break;
-//            case R.id.drawer_schedulers:
-//                clearBackStackEntries();
-//                bundle.putString(Constants.Settings.SETTINGS,
-//                        Constants.Settings.NOTIFICATION);
-//                fragment = new SettingsFragment();
-//                fragment.setArguments(bundle);
-//                break;
-//            case R.id.drawer_schedulers:
-//                clearBackStackEntries();
-//                bundle.putString(Constants.Settings.SETTINGS,
-//                        Constants.Settings.WIDGET);
-//                fragment = new SettingsFragment();
-//                fragment.setArguments(bundle);
-//                break;
-            case R.id.drawer_feedback:
-                openAbout();
-                break;
-            case R.id.drawer_logout:
-                openHelp();
-                break;
-            default:
-                break;
-        }
-        return fragment;
+
+    private void openAccount() {
+
+        Builder alertDialog = new MaterialDialog.Builder(this);
+        alertDialog.customView(R.layout.account_dialog, false);
+
+        alertDialog.show();
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_menu, menu);
-
-        // Associate searchable configuration with the SearchView
-        // SearchManager searchManager = (SearchManager)
-        // getSystemService(Context.SEARCH_SERVICE);
-        // SearchView searchView = (SearchView)
-        // MenuItemCompat.getActionView(menu
-        // .findItem(R.id.search));
-        //
-        // searchView.setSearchableInfo(searchManager
-        // .getSearchableInfo(getComponentName()));
-
-        // if (ViewConfiguration.get(this).hasPermanentMenuKey()) {
-        // // Fixes the hardware menu button color
-        // MenuItem itemSettings = menu.findItem(R.id.settings);
-        // SpannableString settingsString = new SpannableString("Settings");
-        // settingsString.setSpan(new ForegroundColorSpan(Color.WHITE), 0,
-        // settingsString.length(), 0);
-        // itemSettings.setTitle(settingsString);
-        // MenuItem itemAbout = menu.findItem(R.id.about);
-        // SpannableString aboutString = new SpannableString("About");
-        // aboutString.setSpan(new ForegroundColorSpan(Color.WHITE), 0,
-        // aboutString.length(), 0);
-        // itemAbout.setTitle(aboutString);
-        // }
         return true;
     }
 
@@ -446,7 +566,7 @@ public class MainMenuActivity extends AppCompatActivity {
                                                 .reverseRemoveImageFromAlbum(
                                                         MainMenuActivity.this,
                                                         lastDeletedImage);
-                                        Fragment currentFragment = getFragmentManager()
+                                        Fragment currentFragment = getSupportFragmentManager()
                                                 .findFragmentByTag(
                                                         "ImageGridFragment");
                                         if (currentFragment instanceof ImageGridFragment) {
@@ -465,5 +585,6 @@ public class MainMenuActivity extends AppCompatActivity {
     public void setIsAlbum(boolean isAlbum) {
         this.isAlbum = isAlbum;
     }
+
 
 }

@@ -52,4 +52,4 @@
         android:textColor="@color/white_overlay"
         android:textSize="22sp" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/layout/fragment_help.xml -->
+</RelativeLayout>

@@ -27,4 +27,4 @@
         android:key="pref_wallpaper_scaling"
         android:title="@string/wallpaper_scaling" />
 
-</PreferenceScreen><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/xml/settings_wallpaper.xml -->
+</PreferenceScreen>

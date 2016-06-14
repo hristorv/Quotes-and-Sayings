@@ -62,4 +62,4 @@
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/drawer_view" />
 
-</android.support.v4.widget.DrawerLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/layout-v21/activity_main_menu.xml -->
+</android.support.v4.widget.DrawerLayout>

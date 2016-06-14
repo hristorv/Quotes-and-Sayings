@@ -35,4 +35,4 @@
         tools:ignore="NewApi,RtlSymmetry"
         tools:text="Item" />
 
-</LinearLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/core/src/main/res/layout/md_listitem_multichoice.xml --><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/build/intermediates/exploded-aar/com.afollestad/core/unspecified/res/layout/md_listitem_multichoice.xml -->
+</LinearLayout>

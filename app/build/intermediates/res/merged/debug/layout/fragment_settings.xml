@@ -9,4 +9,4 @@
         android:id="@android:id/list">
     </ListView>
 
-</tk.example.quotesandsayings.view.SlideFrameLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/layout/fragment_settings.xml -->
+</tk.example.quotesandsayings.view.SlideFrameLayout>

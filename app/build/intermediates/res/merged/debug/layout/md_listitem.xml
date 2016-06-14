@@ -21,4 +21,4 @@
         android:textSize="@dimen/md_listitem_textsize"
         tools:text="Item" />
 
-</LinearLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/core/src/main/res/layout/md_listitem.xml --><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/build/intermediates/exploded-aar/com.afollestad/core/unspecified/res/layout/md_listitem.xml -->
+</LinearLayout>

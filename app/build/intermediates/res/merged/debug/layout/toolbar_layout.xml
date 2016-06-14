@@ -22,8 +22,9 @@
         <TextView
             android:id="@+id/toolbar_title"
             style="@style/ToolbarTitle"
+            android:textColor="@color/primary_text_color_light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </FrameLayout>
 
-</android.support.v7.widget.Toolbar><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/layout/toolbar_layout.xml -->
+</android.support.v7.widget.Toolbar>

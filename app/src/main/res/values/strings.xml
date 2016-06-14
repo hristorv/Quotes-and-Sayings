@@ -128,4 +128,13 @@
     <string name="drawer_feedback">Feedback</string>
     <string name="drawer_logout">Log out</string>
 
+    <string name="tab_categories">Categories</string>
+    <string name="tab_timeline">Timeline</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_browse">Browse</string>
+    <string name="tab_collection">Collection</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="tab_trending">Trending</string>
+
+
 </resources>

@@ -7,11 +7,12 @@ import tk.example.quotesandsayings.view.activities.MainMenuActivity;
 import tk.example.quotesandsayings.view.fragments.ImageGridFragment;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -82,7 +83,7 @@ public class CategoriesGridRecyclerAdapter extends
 
     // Involves populating data into the item through holder
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, int position) {
         //viewHolder.imageView.setImageDrawable(null);
 
         ImageLoader.getInstance().displayImage(
@@ -158,8 +159,8 @@ public class CategoriesGridRecyclerAdapter extends
         public void onClick(View v) {
             Fragment fragment = createFragment(position);
             if (fragment != null) {
-                FragmentManager fragmentManager = ((Activity) context)
-                        .getFragmentManager();
+                FragmentManager fragmentManager = ((AppCompatActivity) context)
+                        .getSupportFragmentManager();
                 fragmentManager
                         .beginTransaction()
                         .setCustomAnimations(R.animator.card_flip_right_in,

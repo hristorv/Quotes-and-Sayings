@@ -32,4 +32,4 @@
             android:textColor="@color/likes_text" />
     </FrameLayout>
 
-</FrameLayout><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/layout/fragment_pictures_item.xml -->
+</FrameLayout>

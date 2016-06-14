@@ -4,4 +4,4 @@
 	    android:minHeight="110dp"
 	    android:minWidth="250dp"
 	    android:resizeMode="horizontal|vertical" >
-	</appwidget-provider><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/xml/appwidget_info.xml -->
+	</appwidget-provider>

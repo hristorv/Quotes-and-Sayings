@@ -4,7 +4,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:weightSum="1">
+    >
 
     <ImageView
         android:layout_width="match_parent"
@@ -28,35 +28,93 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:paddingBottom="16dp"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingBottom="8dp"
+        >
 
-        android:paddingRight="25dp"
-        android:orientation="vertical">
 
-        <tk.example.quotesandsayings.view.BubbleImage.BubbleImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/avatar"
+        <tk.example.quotesandsayings.view.BubbleImage.RoundQuoteImageView
+            android:id="@+id/drawer_avatar_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/cat_wisdom"
             app:siArrowPosition="bottom"
-            app:siTriangleHeight="20dp"
+            app:siTriangleHeight="15dp"
+            app:siRadius="40dp"
             />
 
-
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/drawer_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
             android:text="Ivan Georgiev"
             android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="normal"/>
+            android:textStyle="normal"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/drawer_likes"
+                />
+
+            <TextView
+                android:id="@+id/drawer_likes_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="125"
+                android:textColor="#ffffff"
+                android:textStyle="normal"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/drawer_pictures_white"
+                />
+
+            <TextView
+                android:id="@+id/drawer_pictures_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="15"
+                android:textColor="#ffffff"
+                android:textStyle="normal"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/drawer_albums_white"
+                />
+
+            <TextView
+                android:id="@+id/drawer_albums_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#ffffff"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

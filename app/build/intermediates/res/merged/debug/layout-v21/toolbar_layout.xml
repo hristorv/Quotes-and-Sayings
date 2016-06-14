@@ -25,4 +25,4 @@
             android:layout_height="wrap_content" />
     </FrameLayout>
 
-</android.support.v7.widget.Toolbar><!-- From: file:/C:/Users/Hri100/StudioProjects/QuotesAndSayings/app/src/main/res/layout-v21/toolbar_layout.xml -->
+</android.support.v7.widget.Toolbar>
